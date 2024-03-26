@@ -8,8 +8,13 @@
 			"name": "client",
 			"type": "go",
 			"request": "launch",
+			"buildFlags": "-race",
 			"mode": "auto",
-			"program": "./client/cmd"
+			"program": "./sbg_client/cmd",
+			"args": [
+				"--server-address=:8080",
+				"--web-template-path=../web/static",
+			]
 		}
 	]
 }
